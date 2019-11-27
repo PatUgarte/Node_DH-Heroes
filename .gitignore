@@ -95,4 +95,6 @@ public/
 # DynamoDB Local files
 .dynamodb/
 
+dh-heroes-v1/
+
 # End of https://www.gitignore.io/api/node
