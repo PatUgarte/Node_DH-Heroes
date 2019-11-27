@@ -96,5 +96,6 @@ public/
 .dynamodb/
 
 dh-heroes-v1/
+dh-heroes-v2/
 
 # End of https://www.gitignore.io/api/node

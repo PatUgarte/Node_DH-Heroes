@@ -1,4 +1,3 @@
-const errorController = require("./errorController.js");
 const heroes = require("../data/heroes.json");
 
 function findHeroById(heroId) {
@@ -6,8 +5,8 @@ function findHeroById(heroId) {
     return foundHero;
 }
 
-let heroesController = {
-    jsoncito: (req, res) => res.send(heroes),
+module.exports = {
+    json: (req, res) => res.send(heroes),
     detalle: (req, res) => {
         let heroId = req.params.n;
         let hero = findHeroById(heroId);
@@ -22,6 +21,4 @@ let heroesController = {
         message += (ok === "ok") ? `${hero.resenia}` : `​Lamento que no desees saber más de mi :(`;
         res.send(message);
     },
-    error: errorController.error,
-}
-module.exports = heroesController;
+};
